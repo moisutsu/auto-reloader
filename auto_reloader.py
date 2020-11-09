@@ -5,10 +5,6 @@ class AutoReloader:
     def __init__(self, module):
         self.module = module
 
-    def _reload_module(self):
-        self._deep_reload(self.module)
-        return self.module
-
     def _deep_reload(self, module):
         reload(module)
         for attribute_name in dir(module):
@@ -17,5 +13,5 @@ class AutoReloader:
                 self._deep_reload(attribute)
 
     def __getattr__(self, name):
-        self._reload_module()
+        self._deep_reload(self.module)
         return getattr(self.module, name)
