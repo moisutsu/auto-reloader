@@ -4,6 +4,8 @@ version = "0.1.0"
 description = ""
 authors = ["moisutsu <moisutsu@gmail.com>"]
 
+repository = "https://github.com/moisutsu/auto-reloader"
+
 [tool.poetry.dependencies]
 python = "^3.9"
 
