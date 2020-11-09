@@ -1,5 +1,13 @@
-from auto_reloader import __version__
+from auto_reloader import AutoReloader
+from tests import classes as _classes
+import unittest
 
+class TestAutoReloader(unittest.TestCase):
+    def test_auto_reloader(self):
+        test_class = AutoReloader(_classes)
+        test = test_class.TestClass()
+        assert test.a == 10
+        assert test.test() == "test"
 
-def test_version():
-    assert __version__ == '0.1.0'
+if __name__ == "__main__":
+    unittest.main()
