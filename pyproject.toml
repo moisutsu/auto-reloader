@@ -3,6 +3,7 @@ name = "auto-reloader"
 version = "0.1.1"
 description = "Automatic reloading library for Jupyter"
 authors = ["moisutsu <moisutsu@gmail.com>"]
+readme = "README.md"
 
 repository = "https://github.com/moisutsu/auto-reloader"
 
